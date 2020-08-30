@@ -22,11 +22,10 @@ int HHCN::TheTich(){
 }
 
 HHCN HHCN::operator+(int d){
-  HHCN t;
-  t.chieuDai = this->chieuDai + d;
-  t.chieuRong = this->chieuRong + d;
-  t.chieuCao = this->chieuCao + d;
-  return t;
+  this->chieuDai += d;
+  this->chieuRong += d;
+  this->chieuCao += d;
+  return *this;
 }
 
 ostream& operator<<(ostream &os, HHCN x){
